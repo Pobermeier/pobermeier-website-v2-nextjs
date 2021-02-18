@@ -15,7 +15,9 @@ class MyDocument extends Document {
   render() {
     return (
       <Html lang="en">
-        <Head />
+        <Head>
+          <script src="/js/cookieBanner.js" />
+        </Head>
         <body>
           <Main />
           <NextScript />
