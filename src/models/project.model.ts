@@ -1,3 +1,4 @@
+/* eslint-disable */
 interface Dimensions {
   width: number;
   height: number;
