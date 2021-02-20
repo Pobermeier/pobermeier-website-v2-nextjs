@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "export": "next build && next export",
     "start": "next start",
     "ts-validate": "tsc --project tsconfig.json --pretty --noEmit",
     "postinstall": "husky install",
