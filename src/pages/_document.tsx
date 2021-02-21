@@ -15,13 +15,178 @@ class MyDocument extends Document {
 
   render(): JSX.Element {
     return (
-      <Html lang="en">
+      <Html lang="en" className="no-js">
         <Head>
           <script src="/js/cookieBanner.js" />
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+                document.querySelector("html").classList.remove("no-js");
+              `,
+            }}
+          />
+          <style
+            dangerouslySetInnerHTML={{
+              __html: `
+                #loader {
+                  position: relative;
+                  width: 100vw;
+                  height: 100vh;
+                  display: block;
+                }
+            
+                #content-body {
+                  display: none;
+                }
+            
+                .custom-loader {
+                  position: absolute;
+                  top: calc(50vh - 64px);
+                  left: calc(50vw - 64px);
+                  transform: scale(1);
+                  box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+                  border-radius: 25px;
+                  animation: pulse 1.2s infinite;
+                }
+            
+                @keyframes pulse {
+                  0% {
+                    transform: scale(0.85);
+                    box-shadow: 0 0 0 0px rgba(123, 201, 111, 0.6);
+                  }
+            
+                  70% {
+                    transform: scale(1.25);
+                    box-shadow: 0 0 0 30px rgba(35, 154, 59, 0);
+                  }
+            
+                  100% {
+                    transform: scale(0.85);
+                    box-shadow: 0 0 0 0 rgba(123, 201, 111, 0);
+                  }
+                }
+
+                .no-js #loader {
+                  display: none !important;
+                }
+            
+                .no-js #content-body {
+                  display: block !important;
+                }
+            
+                .non-lazy .hero .hero-body,
+                .no-js .hero .hero-body {
+                  background-image: linear-gradient(rgba(109, 48, 57, 0.6),
+                      rgba(109, 48, 57, 0.25)),
+                    url("./img/hero.jpg") !important;
+                  /* background-image: linear-gradient(rgba(109, 48, 57, 0.6),
+                      rgba(109, 48, 57, 0.25)),
+                    url("./img/hero.webp") !important; */
+                }
+            
+                .no-js [data-aos] {
+                  opacity: 1 !important;
+                  transform: translate(0) scale(1) !important;
+                  pointer-events: all;
+                }
+              `,
+            }}
+          />
         </Head>
         <body>
-          <Main />
+          <div id="loader" style={{ display: 'block' }}>
+            <span className="is-sr-only">Loading Site...</span>
+            <svg
+              width={128}
+              height={128}
+              viewBox="0 0 256 256"
+              className="custom-loader"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect width={256} height={256} rx={50} fill="#EBEDF0" />
+              <path
+                d="M76.8 102.4H128V103.6C128 131.214 105.614 153.6 78 153.6H76.8V102.4Z"
+                fill="#7BC96F"
+              />
+              <path
+                d="M179.2 153.6H230.4V154.8C230.4 182.414 208.014 204.8 180.4 204.8H179.2V153.6Z"
+                fill="#C6E48B"
+              />
+              <path
+                d="M179.2 153.6L179.2 204.8L178 204.8C150.386 204.8 128 182.414 128 154.8L128 153.6L179.2 153.6Z"
+                fill="#C6E48B"
+              />
+              <path
+                d="M76.8 102.4L76.8 51.2L78 51.2C105.614 51.2 128 73.5858 128 101.2L128 102.4L76.8 102.4Z"
+                fill="#239A3B"
+              />
+              <path
+                d="M179.2 102.4L179.2 51.2L180.4 51.2C208.014 51.2 230.4 73.5858 230.4 101.2L230.4 102.4L179.2 102.4Z"
+                fill="#239A3B"
+              />
+              <path
+                d="M179.2 102.4L128 102.4L128 101.2C128 73.5858 150.386 51.2 178 51.2L179.2 51.2L179.2 102.4Z"
+                fill="#239A3B"
+              />
+              <rect x="179.2" y="102.4" width="51.2" height="51.2" fill="#7BC96F" />
+              <rect x={128} y="102.4" width="51.2" height="51.2" fill="#7BC96F" />
+              <rect x="25.6" y="153.6" width="51.2" height="51.2" fill="#C6E48B" />
+              <rect x="25.6" y="102.4" width="51.2" height="51.2" fill="#7BC96F" />
+              <rect x="25.6" y="51.2" width="51.2" height="51.2" fill="#239A3B" />
+            </svg>
+          </div>
+
+          <div id="content-body" style={{ display: 'none' }}>
+            <Main />
+          </div>
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+                document.addEventListener("DOMContentLoaded", () => {
+                  setTimeout(showPage, 1000)
+                })
+          
+                function showPage() {
+                  document.querySelector("#loader").style.display = "none"
+                  document.querySelector("#content-body").style.display = "block"
+                }
+              `,
+            }}
+          />
+
           <NextScript />
+
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+                function convertWindowHeightToViewPortHeight() {
+                  let vh = window.innerHeight * 0.01;
+                  document.documentElement.style.setProperty("--vh", vh+"px");
+                }
+                
+                function fetchStyle(url) {
+                  let link = document.createElement("link");
+                  link.type = "text/css";
+                  link.rel = "stylesheet";
+                  link.href = url;
+                  let headScript = document.querySelector("script");
+                  headScript.parentNode.insertBefore(link, headScript);
+                }
+
+                window.addEventListener("load", () => {
+                  fetchStyle(
+                    "https://fonts.googleapis.com/css?family=Montserrat:200,400&display=swap"
+                  );
+                  convertWindowHeightToViewPortHeight();
+                });
+              
+                window.addEventListener("resize", () =>
+                  convertWindowHeightToViewPortHeight()
+                );
+              `,
+            }}
+          />
         </body>
       </Html>
     );
