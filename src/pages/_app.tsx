@@ -1,11 +1,13 @@
-import { ComponentClass } from 'react';
+import { ComponentClass, useState } from 'react';
 import { AppProps } from 'next/app';
 import 'styles/scss/styles.scss';
 import MainLayout from 'layouts/MainLayout';
 
 const MyApp: React.FC<Props> = ({ Component, pageProps }) => {
+  const [isNavMenuOpen, setIsNavMenuOpen] = useState(false);
+
   return (
-    <MainLayout>
+    <MainLayout isNavbarOpen={isNavMenuOpen} setIsNavMenuOpen={setIsNavMenuOpen}>
       <Component {...pageProps} />
     </MainLayout>
   );
