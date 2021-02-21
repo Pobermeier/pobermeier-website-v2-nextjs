@@ -18,7 +18,7 @@ const SEO: React.FC<Props> = ({ title, description, keywords }) => {
       <meta name="publisher" content="Patrick Obermeier" />
       <meta name="creator" content="Patrick Obermeier" />
       <link rel="canonical" href="https://www.patrickobermeier.dev/" />
-      <link rel="manifest" href="site.webmanifest"></link>
+      <link rel="manifest" href="manifest.json"></link>
 
       {/* <!-- DNS Prefetch / Preconnect to GA & Google Fonts --> */}
       <link rel="preconnect" href="https://www.google-analytics.com" />
