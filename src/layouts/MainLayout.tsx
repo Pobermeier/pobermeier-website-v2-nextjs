@@ -1,6 +1,7 @@
+import { Dispatch, SetStateAction } from 'react';
+import Footer from '@/components/Footer/Footer';
 import Navbar from '@/components/Navigation/Navbar';
 import SEO from '@/components/SEO/SEO';
-import { Dispatch, SetStateAction } from 'react';
 
 const MainLayout: React.FC<Props> = ({ children, isNavbarOpen, setIsNavMenuOpen }) => {
   return (
@@ -10,6 +11,8 @@ const MainLayout: React.FC<Props> = ({ children, isNavbarOpen, setIsNavMenuOpen 
         <Navbar isNavbarOpen={isNavbarOpen} setIsNavMenuOpen={setIsNavMenuOpen} />
       </header>
       {children}
+
+      <Footer />
     </>
   );
 };
