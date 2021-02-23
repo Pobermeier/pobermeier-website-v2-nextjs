@@ -9,8 +9,10 @@
     "export": "next build && next export",
     "lint": "eslint --ext js,jsx,ts,tsx ./src",
     "lint.fix": "eslint --fix --ext js,jsx,ts,tsx ./src",
+    "local": "npm run cicd && npm run serve",
     "postinstall": "husky install",
     "start": "next start",
+    "serve": "npx serve out",
     "ts-validate": "tsc --project tsconfig.json --pretty --noEmit"
   },
   "dependencies": {
