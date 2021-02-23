@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 'use strict';
 
 (function initCookieBanner() {
@@ -35,13 +36,9 @@
         setCookie('cookies-accepted', '1', 365 * 5);
         document.querySelector('#cookie-info').style.display = 'none';
       }
-    });
 
-    document.addEventListener('click', (e) => {
       if (e.target.id === 'open-privacy-notice') {
-        const privacyModal = document.querySelector('#privacy-modal');
-        !privacyModal.classList.contains('is-active') &&
-          privacyModal.classList.add('is-active');
+        window.location.href = '/privacy';
       }
     });
   };
@@ -50,7 +47,7 @@
     const getCookie = (cookieName) => {
       const allStoredCookies = document.cookie.split('; ');
       const foundCookie = allStoredCookies.filter((cookie) =>
-        cookie.split('=').includes(cookieName),
+        cookie.split('=').includes(cookieName)
       )[0];
       return foundCookie;
     };
