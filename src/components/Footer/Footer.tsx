@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 const currentYear = new Date().getFullYear();
 
 const Footer: React.FC = () => {
@@ -6,29 +8,27 @@ const Footer: React.FC = () => {
       <div className="content has-text-centered">
         <p>
           <strong>
-            <a href="./uses.html" className="gtm-tracked-link" id="uses-page-link">
-              /uses
-            </a>
+            <Link href="/uses">
+              <a className="gtm-tracked-link" id="uses-page-link">
+                /uses
+              </a>
+            </Link>
           </strong>{' '}
           |{' '}
           <strong>
-            <a
-              className="modal-link gtm-tracked-link"
-              data-target="privacy-modal"
-              id="open-privacy-modal"
-            >
-              Privacy Notice
-            </a>
+            <Link href="/privacy">
+              <a className="modal-link gtm-tracked-link" id="open-privacy-modal">
+                Privacy Notice
+              </a>
+            </Link>
           </strong>{' '}
           |{' '}
           <strong>
-            <a
-              className="modal-link gtm-tracked-link"
-              data-target="imprint-modal"
-              id="open-imprint-modal"
-            >
-              Imprint
-            </a>
+            <Link href="/imprint">
+              <a className="modal-link gtm-tracked-link" id="open-imprint-modal">
+                Imprint
+              </a>
+            </Link>
           </strong>
         </p>
         <br />
