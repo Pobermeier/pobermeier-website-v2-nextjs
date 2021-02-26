@@ -6,17 +6,21 @@ import { Dispatch, KeyboardEvent, SetStateAction } from 'react';
 import MainLogoImg from '../Icons/MainLogo';
 
 const rootPath = '/';
+const resumePath = "/resume"
 
 const Navbar: React.FC<Props> = ({ isNavbarOpen, setIsNavMenuOpen }) => {
   const router = useRouter();
 
   const isRootPath = router.asPath === rootPath;
+  const isResumePath  = router.asPath === resumePath;
 
   const [toggleNavMenu, closeNavMenu] = useNavMenu(setIsNavMenuOpen, isNavbarOpen);
 
   const onEnterKeyDown = (event: KeyboardEvent<HTMLAnchorElement>): void => {
     event.key == 'Enter' && toggleNavMenu();
   };
+
+  if (isResumePath) return null; 
 
   return (
     <nav className="navbar" aria-label="main navigation">
