@@ -1,6 +1,9 @@
+import { useRouter } from 'next/dist/client/router';
 import { useEffect } from 'react';
 
 const useEmailPlaceholders = (): void => {
+  const router = useRouter();
+
   useEffect(() => {
     (function setEmailAddress(elements, email) {
       elements &&
@@ -44,7 +47,7 @@ const useEmailPlaceholders = (): void => {
                                   <span class="sr-only">Email</span>
                                 </span>`;
     emailIconFooterPlaceholder && emailIconFooterPlaceholder.replaceWith(emailIconFooter);
-  }, []);
+  }, [router.asPath]);
 };
 
 export default useEmailPlaceholders;
