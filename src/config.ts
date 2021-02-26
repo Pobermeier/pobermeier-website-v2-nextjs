@@ -1,3 +1,5 @@
+import projects from 'data/projects';
+
 export default {
   meta: {
     defaultTitle: 'Patrick Obermeier | Frontend Developer & Online-Marketing Expert',
@@ -7,4 +9,5 @@ export default {
       'frontend developer, front-end developer, web developer, webdesign, web designer, html5, css, javascript, react, redux, mern-stack, node, mongodb, express, docker, linux, portfolio, projects, coder, programmer, web apps, websites, marketing sites, landing pages',
     themeColor: '#f5f5f5',
   },
+  projects: [...projects],
 };
