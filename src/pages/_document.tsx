@@ -22,10 +22,6 @@ class MyDocument extends Document {
           <meta name="viewport" content="width=device-width, initial-scale=1.0" />
           <meta name="msvalidate.01" content="D5238646980530643F5FC0FFBF63FB97" />
           <meta httpEquiv="X-UA-Compatible" content="ie=edge" />
-          <meta name="copyright" content="2021 Patrick Obermeier. All Rights reserved." />
-          <meta name="author" content="Patrick Obermeier" />
-          <meta name="publisher" content="Patrick Obermeier" />
-          <meta name="creator" content="Patrick Obermeier" />
           <link rel="manifest" href="manifest.json"></link>
 
           {/* <!-- DNS Prefetch / Preconnect to GA & Google Fonts --> */}
