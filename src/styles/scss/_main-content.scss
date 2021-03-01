@@ -35,8 +35,7 @@ main {
           & figure img {
             margin-top: 0.5rem;
             border-radius: 0.5rem 0.5rem 0 0;
-            box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11),
-              0 1px 3px rgba(0, 0, 0, 0.08);
+            box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
           }
         }
 
@@ -47,8 +46,7 @@ main {
         }
 
         .small-logo img {
-          box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11),
-            0 1px 3px rgba(0, 0, 0, 0.08);
+          box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
           border-radius: 0.75rem;
         }
 
@@ -63,6 +61,10 @@ main {
         }
 
         .card-content {
+          p {
+            color: $darkGrey;
+          }
+
           .is-grouped {
             justify-content: center;
           }
@@ -117,14 +119,12 @@ main {
       }
     }
 
-    &:nth-child(even) {
-      .title,
-      .subtitle strong {
-        color: $midGreen;
-      }
+    .title,
+    .subtitle strong {
+      color: $midGreen;
     }
 
-    &:nth-child(odd) {
+    &:nth-child(odd):not(:first-of-type) {
       background: linear-gradient($midGreen, $lightGreen);
       margin: 3rem 0;
       .title,
@@ -148,11 +148,16 @@ main {
         }
       }
 
+      strong,
+      p {
+        color: $white-ter;
+      }
+
       &::before {
         position: absolute;
         left: 0;
         top: -2.9rem;
-        content: "";
+        content: '';
         display: block;
         height: 3rem;
         width: 100vw;
@@ -164,7 +169,7 @@ main {
         position: absolute;
         left: 0;
         bottom: -2.9rem;
-        content: "";
+        content: '';
         display: block;
         height: 3rem;
         width: 100vw;
