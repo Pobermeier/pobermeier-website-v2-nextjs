@@ -117,14 +117,14 @@ main {
       }
     }
 
-    &:nth-child(odd) {
+    &:nth-child(even) {
       .title,
       .subtitle strong {
         color: $midGreen;
       }
     }
 
-    &:nth-child(even) {
+    &:nth-child(odd) {
       background: linear-gradient($midGreen, $lightGreen);
       margin: 3rem 0;
       .title,
