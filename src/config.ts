@@ -2,6 +2,7 @@ import projects from 'data/projects';
 
 export default {
   meta: {
+    canonicalRootUrl: 'https://www.patrickobermeier.dev',
     defaultTitle: 'Patrick Obermeier | Frontend Developer & Online-Marketing Expert',
     defaultDescription:
       'Patrick Obermeier is an experienced front-end developer and online-marketing expert from Vienna, Austria. Creating web apps and websites using latest technologies like React & the MERN-Stack with passion!',
