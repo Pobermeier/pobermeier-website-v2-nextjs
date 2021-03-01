@@ -105,7 +105,16 @@ const Home: React.FC = () => {
                 </p>
               </div>
             </div>
-            <div id="scroll-to-about" className="scroll-to-arrow">
+            <div
+              id="scroll-to-about"
+              role="button"
+              tabIndex={0}
+              onKeyDown={(event) =>
+                event.key === 'Enter' && document.getElementById('about')?.scrollIntoView()
+              }
+              onClick={() => document.getElementById('about')?.scrollIntoView()}
+              className="scroll-to-arrow"
+            >
               <div className="nav-text">
                 <p className="is-size-6">About Me</p>
               </div>
