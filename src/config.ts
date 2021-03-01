@@ -16,4 +16,11 @@ export default {
     themeColor: '#f5f5f5',
   },
   projects: [...projects],
+  urls: {
+    email: 'patrick.obermeier@outlook.com',
+    linkedIn: 'https://www.linkedin.com/in/patrickobermeier/',
+    github: 'https://github.com/Pobermeier',
+    twitter: 'https://twitter.com/pobermeier87',
+    websiteRepo: 'https://github.com/Pobermeier/pobermeier-website-v2-nextjs',
+  },
 };
