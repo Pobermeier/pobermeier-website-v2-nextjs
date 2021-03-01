@@ -1,3 +1,4 @@
+import config from 'config';
 import Link from 'next/link';
 
 const currentYear = new Date().getFullYear();
@@ -17,7 +18,7 @@ const Footer: React.FC = () => {
           |{' '}
           <strong>
             <Link href="/privacy">
-              <a className="modal-link gtm-tracked-link" id="open-privacy-modal">
+              <a className="gtm-tracked-link" id="open-privacy-modal">
                 Privacy Notice
               </a>
             </Link>
@@ -25,7 +26,7 @@ const Footer: React.FC = () => {
           |{' '}
           <strong>
             <Link href="/imprint">
-              <a className="modal-link gtm-tracked-link" id="open-imprint-modal">
+              <a className="gtm-tracked-link" id="open-imprint-modal">
                 Imprint
               </a>
             </Link>
@@ -35,7 +36,7 @@ const Footer: React.FC = () => {
         <p>
           <strong>
             <a
-              href="https://github.com/Pobermeier/pobermeier-website-v2-nextjs"
+              href={config.urls.websiteRepo}
               className="gtm-tracked-link"
               id="github-code-page-link"
             >
@@ -54,14 +55,14 @@ const Footer: React.FC = () => {
           </strong>
         </p>
         <p>
-          <br />© {currentYear} Patrick Obermeier.
+          <br />© {currentYear} {config.meta.siteOwnerName}.
           <br /> All rights reserved.
         </p>
         <p>
           <span id="email-icon-placeholder-footer" />
           &nbsp;&nbsp;&nbsp;
           <a
-            href="https://www.linkedin.com/in/patrickobermeier/"
+            href={config.urls.linkedIn}
             target="_blank"
             rel="noopener noreferrer"
             className="gtm-tracked-link"
@@ -83,7 +84,7 @@ const Footer: React.FC = () => {
           </a>
           &nbsp;&nbsp;
           <a
-            href="https://twitter.com/pobermeier87"
+            href={config.urls.twitter}
             target="_blank"
             rel="noopener noreferrer"
             className="gtm-tracked-link"
@@ -105,7 +106,7 @@ const Footer: React.FC = () => {
           </a>
           &nbsp;&nbsp;
           <a
-            href="https://github.com/Pobermeier"
+            href={config.urls.github}
             target="_blank"
             rel="noopener noreferrer"
             className="gtm-tracked-link"
