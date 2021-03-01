@@ -19,7 +19,6 @@ class MyDocument extends Document {
         <Head>
           {/* <!-- General Meta-Tags & SEO--> */}
           <meta httpEquiv="Content-Type" content="text/html;charset=UTF-8" />
-          <meta name="viewport" content="width=device-width, initial-scale=1.0" />
           <meta name="msvalidate.01" content="D5238646980530643F5FC0FFBF63FB97" />
           <meta httpEquiv="X-UA-Compatible" content="ie=edge" />
           <link rel="manifest" href="manifest.json"></link>
