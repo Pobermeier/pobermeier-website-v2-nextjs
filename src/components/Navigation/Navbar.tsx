@@ -11,8 +11,8 @@ const resumePath = "/resume"
 const Navbar: React.FC<Props> = ({ isNavbarOpen, setIsNavMenuOpen }) => {
   const router = useRouter();
 
-  const isRootPath = router.asPath === rootPath;
-  const isResumePath  = router.asPath === resumePath;
+  const isRootPath = router.route === rootPath;
+  const isResumePath  = router.route === resumePath;
 
   const [toggleNavMenu, closeNavMenu] = useNavMenu(setIsNavMenuOpen, isNavbarOpen);
 
