@@ -1,5 +1,5 @@
+import TrackedFooterLink from './TrackedFooterLink';
 import config from 'config';
-import Link from 'next/link';
 
 const currentYear = new Date().getFullYear();
 
@@ -8,29 +8,9 @@ const Footer: React.FC = () => {
     <footer className="footer">
       <div className="content has-text-centered">
         <p>
-          <strong>
-            <Link href="/uses">
-              <a className="gtm-tracked-link" id="uses-page-link">
-                /uses
-              </a>
-            </Link>
-          </strong>{' '}
-          |{' '}
-          <strong>
-            <Link href="/privacy">
-              <a className="gtm-tracked-link" id="open-privacy-modal">
-                Privacy Notice
-              </a>
-            </Link>
-          </strong>{' '}
-          |{' '}
-          <strong>
-            <Link href="/imprint">
-              <a className="gtm-tracked-link" id="open-imprint-modal">
-                Imprint
-              </a>
-            </Link>
-          </strong>
+          <TrackedFooterLink caption="/uses" route="/uses" id="uses-page-link" /> |{' '}
+          <TrackedFooterLink caption="Privacy Notice" route="/privacy" id="open-privacy-modal" /> |{' '}
+          <TrackedFooterLink caption="Imprint" route="/imprint" id="open-imprint-modal" />
         </p>
         <br />
         <p>
