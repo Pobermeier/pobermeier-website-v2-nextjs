@@ -95,6 +95,22 @@
         -webkit-animation: mover 1s infinite alternate;
         animation: mover 1s infinite alternate;
       }
+
+      &:focus {
+        outline: 0 none;
+
+        & .nav-text {
+          font-weight: 400;
+        }
+
+        & .nav-arrow {
+          svg {
+            line {
+              stroke-width: 3;
+            }
+          }
+        }
+      }
     }
   }
 }
