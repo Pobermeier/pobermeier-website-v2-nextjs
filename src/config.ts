@@ -15,7 +15,10 @@ export default {
       'https://images.ctfassets.net/2hiw8js7vnar/2lp32wEzpzwoRKSEgpj5k4/ab48007f6d160cfc6b26e087206d1840/large_image.png',
     themeColor: '#f5f5f5',
   },
-  projects: [...projects],
+  projects: {
+    personal: projects.filter((project) => project.data.project_type === 'Personal'),
+    work: projects.filter((project) => project.data.project_type === 'Work'),
+  },
   urls: {
     email: 'patrick.obermeier@outlook.com',
     linkedIn: 'https://www.linkedin.com/in/patrickobermeier/',
