@@ -1,9 +1,6 @@
 import { useEffect } from 'react';
 import { useRouter } from 'next/dist/client/router';
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-declare const AOS: any;
-
 const useAOS = (): void => {
   const router = useRouter();
 
