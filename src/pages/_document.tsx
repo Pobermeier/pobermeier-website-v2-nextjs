@@ -48,7 +48,6 @@ class MyDocument extends Document {
           <meta name="msapplication-TileColor" content="#ffffff" />
           <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
 
-          <script src="/js/cookieBanner.js" defer />
           <script
             dangerouslySetInnerHTML={{
               __html: `
