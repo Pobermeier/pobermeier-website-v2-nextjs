@@ -1,5 +1,5 @@
-import { useRouter } from 'next/dist/client/router';
 import { useCallback, useEffect } from 'react';
+import { useRouter } from 'next/dist/client/router';
 import { checkCookie, setCookie } from 'utils/cookies';
 
 const useCookieBanner = (): void => {
