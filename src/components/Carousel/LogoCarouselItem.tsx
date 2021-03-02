@@ -11,7 +11,6 @@ const LogoCarouselItem: React.FC<Props> = (props) => {
   return (
     <li className="logo-carousel__item">
       <TechnologyLogo {...props} />
-      <span className="is-sr-only">{props.technologyName}</span>
     </li>
   );
 };

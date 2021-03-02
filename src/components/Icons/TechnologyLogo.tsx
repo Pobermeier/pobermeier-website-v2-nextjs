@@ -16,6 +16,7 @@ const TechnologyLogo: React.FC<Props> = ({ width, height, imgSrc, technologyName
         alt={technologyName}
         title={technologyName}
       />
+      <span className="is-sr-only">{technologyName}</span>
     </>
   );
 };

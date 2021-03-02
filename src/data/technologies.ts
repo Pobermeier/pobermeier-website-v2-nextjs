@@ -1,4 +1,4 @@
-export default {
+const technologies: { [index: string]: { name: string; imgSrc: string } } = {
   html: {
     name: 'HTML',
     imgSrc: './img/logos/html5.svg',
@@ -27,7 +27,7 @@ export default {
     name: 'Redux',
     imgSrc: './img/logos/redux.svg',
   },
-  nodejs: {
+  node: {
     name: 'Node.js',
     imgSrc: './img/logos/node-dot-js.svg',
   },
@@ -80,3 +80,5 @@ export default {
     imgSrc: './img/logos/unity.svg',
   },
 };
+
+export default technologies;
