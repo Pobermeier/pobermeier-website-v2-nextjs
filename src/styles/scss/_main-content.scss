@@ -61,7 +61,8 @@ main {
         }
 
         .card-content {
-          p {
+          p,
+          .subtitle {
             color: $darkGrey;
           }
 
