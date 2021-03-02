@@ -1,4 +1,5 @@
 import projects from 'data/projects';
+import technologies from 'data/technologies';
 
 const siteOwnerName = 'Patrick Obermeier';
 
@@ -20,6 +21,7 @@ export default {
     personal: projects.filter((project) => project.data.project_type === 'Personal'),
     work: projects.filter((project) => project.data.project_type === 'Work'),
   },
+  technologies: [...Object.values(technologies)],
   urls: {
     email: 'patrick.obermeier@outlook.com',
     linkedIn: 'https://www.linkedin.com/in/patrickobermeier/',
