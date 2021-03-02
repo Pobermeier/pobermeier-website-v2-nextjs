@@ -50,7 +50,7 @@ interface Data {
   project_logo: ProjectLogo;
   project_title: ProjectTitle[];
   project_subtitle: ProjectSubtitle[];
-  project_type: string;
+  project_type: "Personal" | "Work";
   project_description: string;
   technologies_used: string;
   live_project_link: LiveProjectLink;
