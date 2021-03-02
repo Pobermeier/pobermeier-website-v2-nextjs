@@ -57,7 +57,7 @@ interface Data {
   code_link: CodeLink;
 }
 
-export interface Project {
+interface Project {
   id: string;
   uid?: any;
   type: string;

@@ -1,5 +1,3 @@
-import { Project } from 'models/project.model';
-
 const projects: Project[] = [
   {
     id: 'X-inoxAAACMAuWju',
