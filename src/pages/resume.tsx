@@ -1,9 +1,12 @@
 import SEO from '@/components/SEO/SEO';
+import config from 'config';
 
 const Resume: React.FC = () => {
   return (
     <>
-      <SEO title="Curriculum Vitae | Patrick Obermeier | Frontend Developer & Online-Marketing Expert" />
+      <SEO
+        title={`Curriculum Vitae | ${config.meta.siteOwnerName} | Frontend Developer & Online-Marketing Expert`}
+      />
       <iframe src="/doc/CV_EN.pdf" id="pdf" title="Curriculum Vitae" />
       <style jsx>
         {`

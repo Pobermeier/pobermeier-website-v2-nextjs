@@ -1,4 +1,5 @@
 import SEO from '@/components/SEO/SEO';
+import config from 'config';
 
 const Imprint: React.FC = () => {
   return (
@@ -15,7 +16,7 @@ const Imprint: React.FC = () => {
             </h2>
 
             <p>
-              Patrick Obermeier
+              {config.meta.siteOwnerName}
               <br />
               Front-End Developer &amp; Online-Marketing Expert
               <br />
@@ -46,7 +47,8 @@ const Imprint: React.FC = () => {
               </a>{' '}
             </p>
             <p>
-              Designed and created by Patrick Obermeier. The code for this website is available{' '}
+              Designed and created by {config.meta.siteOwnerName}. The code for this website is
+              available{' '}
               <a
                 href="https://github.com/Pobermeier/pobermeier-website-v1"
                 target="_blank"
@@ -67,7 +69,8 @@ const Imprint: React.FC = () => {
               <strong>Terms of Use</strong>
               <br />
               The contents of this website can be used freely and are for information only. By using
-              the selection options on the website, no legal transactions between Patrick Obermeier
+              the selection options on the website, no legal transactions between{' '}
+              {config.meta.siteOwnerName}
               (henceforth called &quot;the operator&quot;) and the users or between the users come
               about. The further procedure between providers and users and the possible subsequent
               conclusion of orders between providers and users are at the sole discretion of the
@@ -115,11 +118,11 @@ const Imprint: React.FC = () => {
               <br />
               Die Inhalte dieser Website sind frei nutzbar und dienen ausschließlich der
               Information. Es kommen durch die Nutzung der Auswahlmöglichkeiten der Website
-              keinerlei Rechtsgeschäfte zwischen Patrick Obermeier (fortan &quot;der Betreiber&quot;
-              genannt) und den Nutzern oder zwischen den Nutzern zu Stande. Die weitere
-              Vorgangsweise zwischen Anbietern und Nutzern und der mögliche spätere Abschluss von
-              Aufträgen zwischen Anbietern und Nutzern liegen im ausschließlichen Ermessen der
-              Nutzer.
+              keinerlei Rechtsgeschäfte zwischen {config.meta.siteOwnerName} (fortan &quot;der
+              Betreiber&quot; genannt) und den Nutzern oder zwischen den Nutzern zu Stande. Die
+              weitere Vorgangsweise zwischen Anbietern und Nutzern und der mögliche spätere
+              Abschluss von Aufträgen zwischen Anbietern und Nutzern liegen im ausschließlichen
+              Ermessen der Nutzer.
             </p>
             <br />
             <p>

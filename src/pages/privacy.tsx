@@ -1,4 +1,5 @@
 import SEO from '@/components/SEO/SEO';
+import config from 'config';
 
 const Privacy: React.FC = () => {
   return (
@@ -112,7 +113,7 @@ const Privacy: React.FC = () => {
             <p>You can reach us using the following contact details:</p>
             <br />
             <p>
-              Patrick Obermeier
+              {config.meta.siteOwnerName}
               <br />
               <span className="email-placeholder" />
             </p>
@@ -232,7 +233,7 @@ const Privacy: React.FC = () => {
             <p>Du erreichst uns unter folgenden Kontaktdaten:</p>
             <br />
             <p>
-              Patrick Obermeier
+              {config.meta.siteOwnerName}
               <br />
               <span className="email-placeholder" />
             </p>

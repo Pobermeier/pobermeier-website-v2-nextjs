@@ -1,3 +1,4 @@
+import config from 'config';
 import React from 'react';
 
 const MainLogoImg: React.FC<Props> = ({ width, height }) => {
@@ -7,7 +8,7 @@ const MainLogoImg: React.FC<Props> = ({ width, height }) => {
       className="main-logo"
       width={width}
       height={height}
-      alt="Patrick Obermeier"
+      alt={config.meta.siteOwnerName}
       title="Back to top"
     />
   );
