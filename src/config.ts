@@ -4,6 +4,9 @@ import technologies from 'data/technologies';
 const siteOwnerName = 'Patrick Obermeier';
 
 export default {
+  gtm: {
+    id: 'GTM-TLPT94R',
+  },
   meta: {
     bingValidationId: 'D5238646980530643F5FC0FFBF63FB97',
     canonicalRootUrl: 'https://www.patrickobermeier.dev',
