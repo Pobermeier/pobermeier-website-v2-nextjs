@@ -5,9 +5,9 @@
   "scripts": {
     "build": "next build",
     "build:docker": "docker build .",
-    "clean": "rm -rf .next out",
     "cicd": "npm run clean && npm run lint && npm run ts-validate && npm run build",
     "cicd:static": "npm run clean && npm run lint && npm run ts-validate && npm run export",
+    "clean": "rm -rf .next out",
     "dev": "next dev",
     "dev:docker": "docker-compose up dev",
     "export": "next build && next export",
@@ -15,8 +15,8 @@
     "lint.fix": "eslint --fix --ext js,jsx,ts,tsx ./src",
     "local": "npm run cicd:static && npm run serve",
     "postinstall": "husky install",
-    "start": "next start",
     "serve": "npx serve out",
+    "start": "next start",
     "ts-validate": "tsc --project tsconfig.json --pretty --noEmit"
   },
   "dependencies": {
