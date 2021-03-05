@@ -6,6 +6,7 @@ import Document, {
   DocumentContext,
   DocumentInitialProps,
 } from 'next/document';
+import config from 'config';
 
 class MyDocument extends Document {
   static async getInitialProps(ctx: DocumentContext): Promise<DocumentInitialProps> {
@@ -122,8 +123,26 @@ class MyDocument extends Document {
               `,
             }}
           />
+          {/* Google Tag Manager */}
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+                j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+                'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+                })(window,document,'script','dataLayer','${config.gtm.id}');`,
+            }}
+          />
+          {/* End Google Tag Manager */}
         </Head>
         <body>
+          {/* Google Tag Manager (noscript) */}
+          <noscript
+            dangerouslySetInnerHTML={{
+              __html: `<iframe src="https://www.googletagmanager.com/ns.html?id=${config.gtm.id}" height="0" width="0" style="display:none;visibility:hidden"></iframe>`,
+            }}
+          />
+          {/* End Google Tag Manager (noscript) */}
           <div id="loader" style={{ display: 'block' }}>
             <span className="is-sr-only">Loading Site...</span>
             <svg
