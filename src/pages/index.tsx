@@ -2,6 +2,7 @@ import LogoCarousel from '@/components/Carousel/LogoCarousel';
 import ProjectCard from '@/components/Projects/ProjectCard';
 import SEO from '@/components/SEO/SEO';
 import config from 'config';
+import Link from 'next/link';
 
 const Home: React.FC = () => {
   return (
@@ -202,13 +203,14 @@ const Home: React.FC = () => {
                 </a>
               </p>
               <p className="control level-item column is-half has-text-left">
-                <a
-                  className="button is-secondary is-rounded is-medium gtm-tracked-link secondary-cta"
-                  href="./resume.html"
-                  id="resume-about-desktop"
-                >
-                  <span>View Resume</span>
-                </a>
+                <Link href="/resume">
+                  <a
+                    className="button is-secondary is-rounded is-medium gtm-tracked-link secondary-cta"
+                    id="resume-about-desktop"
+                  >
+                    <span>View Resume</span>
+                  </a>
+                </Link>
               </p>
             </div>
             <div className="field is-hidden-desktop">
