@@ -6,7 +6,7 @@ const Privacy: React.FC = () => {
     <>
       <SEO title="Privacy Notice" />
 
-      <section className="section about" id="about" style={{ marginTop: '3.8rem' }}>
+      <section className="section" style={{ marginTop: '3.8rem' }}>
         <div className="container">
           <h1 className="title">Privacy Notice</h1>
           <div>

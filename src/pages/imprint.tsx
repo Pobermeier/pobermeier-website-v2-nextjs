@@ -6,7 +6,7 @@ const Imprint: React.FC = () => {
     <>
       <SEO title="Imprint" />
 
-      <section className="section about" id="about" style={{ marginTop: '3.8rem' }}>
+      <section className="section" style={{ marginTop: '3.8rem' }}>
         <div className="container">
           <h1 className="title">Imprint</h1>
           <div>

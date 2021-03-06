@@ -5,7 +5,7 @@ const Uses: React.FC = () => {
     <>
       <SEO title="Thank you for your message!" />
 
-      <section className="section about" id="about" style={{ marginTop: '3.8rem' }}>
+      <section className="section" style={{ marginTop: '3.8rem' }}>
         <div className="container">
           <h1 className="title">/uses</h1>
           <p>
