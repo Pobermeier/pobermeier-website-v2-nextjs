@@ -107,12 +107,12 @@ class MyDocument extends Document {
             
                 .non-lazy .hero .hero-body,
                 .no-js .hero .hero-body {
-                  background-image: linear-gradient(rgba(109, 48, 57, 0.6),
-                      rgba(109, 48, 57, 0.25)),
-                    url("./img/hero.jpg") !important;
                   /* background-image: linear-gradient(rgba(109, 48, 57, 0.6),
                       rgba(109, 48, 57, 0.25)),
-                    url("./img/hero.webp") !important; */
+                    url("./img/hero.jpg") !important; */
+                  background-image: linear-gradient(rgba(109, 48, 57, 0.6),
+                      rgba(109, 48, 57, 0.25)),
+                    url("./img/hero.webp") !important;
                 }
             
                 .no-js [data-aos] {
