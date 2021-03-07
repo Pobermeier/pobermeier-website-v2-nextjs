@@ -1,3 +1,4 @@
+import Fade from 'react-reveal/Fade';
 import LogoCarousel from '@/components/Carousel/LogoCarousel';
 import ProjectCard from '@/components/Projects/ProjectCard';
 import SEO from '@/components/SEO/SEO';
@@ -7,13 +8,13 @@ import Link from 'next/link';
 const Home: React.FC = () => {
   return (
     <>
-      <div>
+      <div className="animate__animated animate__fadeIn">
         <SEO />
         {/* Hero-Section */}
         <section className="hero is-fullheight-with-navbar is-large" id="hero">
           <div className="hero-body lazy-background enhanced">
             <div className="container">
-              <h1 className="title has-text-white is-size-1 is-size-2-tablet is-size-3-mobile">
+              <h1 className="title has-text-white is-size-1 is-size-2-tablet is-size-3-mobile animate__animated animate__fadeInLeft">
                 Creating{' '}
                 <span
                   style={{
@@ -27,10 +28,10 @@ const Home: React.FC = () => {
                 </span>{' '}
                 with passion!
               </h1>
-              <h1 className="subtitle has-text-white is-size-3 is-size-4-tablet is-size-5-mobile">
+              <h1 className="subtitle has-text-white is-size-3 is-size-4-tablet is-size-5-mobile animate__animated animate__fadeInRight">
                 Frontend Developer &amp; Online-Marketing Expert from Vienna, Austria
               </h1>
-              <div className="field is-grouped is-hidden-touch cta-desktop">
+              <div className="field is-grouped is-hidden-touch cta-desktop animate__animated animate__fadeInLeft">
                 <p className="control">
                   <a
                     className="button is-primary is-rounded is-large gtm-tracked-link primary-cta"
@@ -74,7 +75,7 @@ const Home: React.FC = () => {
                   </a>
                 </p>
               </div>
-              <div className="field is-hidden-desktop">
+              <div className="field is-hidden-desktop animate__animated animate__fadeInLeft">
                 <p className="control">
                   <a
                     className="button is-primary is-fullwidth is-rounded is-medium gtm-tracked-link primary-cta"
@@ -163,19 +164,21 @@ const Home: React.FC = () => {
             <h2 className="title">About Me</h2>
             <div className="columns level">
               <div className="column level-item has-text-centered profile-img">
-                <figure className="image">
-                  <picture>
-                    <source srcSet="./img/profile.webp" type="image/webp" />
-                    <img
-                      className="is-rounded"
-                      loading="lazy"
-                      width={200}
-                      height={200}
-                      src="./img/profile.jpg"
-                      alt="Patrick Obermeier"
-                    />
-                  </picture>
-                </figure>
+                <Fade right duration={300}>
+                  <figure className="image">
+                    <picture>
+                      <source srcSet="./img/profile.webp" type="image/webp" />
+                      <img
+                        className="is-rounded"
+                        loading="lazy"
+                        width={200}
+                        height={200}
+                        src="./img/profile.jpg"
+                        alt="Patrick Obermeier"
+                      />
+                    </picture>
+                  </figure>
+                </Fade>
               </div>
               <div className="column is-three-quarters level-item">
                 <p className="subtitle has-text-left">
@@ -292,7 +295,9 @@ const Home: React.FC = () => {
 
                 return (
                   <div className="column" key={project.id}>
-                    <ProjectCard project={project} />
+                    <Fade right duration={500 + 100 * index}>
+                      <ProjectCard project={project} />
+                    </Fade>
                   </div>
                 );
               })}
@@ -304,7 +309,9 @@ const Home: React.FC = () => {
 
                 return (
                   <div className="column" key={project.id}>
-                    <ProjectCard project={project} />
+                    <Fade left duration={500 + 100 * index}>
+                      <ProjectCard project={project} />
+                    </Fade>
                   </div>
                 );
               })}
@@ -320,10 +327,12 @@ const Home: React.FC = () => {
               Please note that the source for these projects is private due to confidentiality.
             </p>
             <div className="columns project-cards">
-              {config.projects.work.map((project) => {
+              {config.projects.work.map((project, index) => {
                 return (
                   <div className="column" key={project.id}>
-                    <ProjectCard project={project} />
+                    <Fade right duration={500 + 100 * index}>
+                      <ProjectCard project={project} />
+                    </Fade>
                   </div>
                 );
               })}

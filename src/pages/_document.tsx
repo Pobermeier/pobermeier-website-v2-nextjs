@@ -54,6 +54,11 @@ class MyDocument extends Document {
             rel="stylesheet"
           />
 
+          <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+          />
+
           <script
             dangerouslySetInnerHTML={{
               __html: `
@@ -192,7 +197,7 @@ class MyDocument extends Document {
             dangerouslySetInnerHTML={{
               __html: `
                 document.addEventListener("DOMContentLoaded", () => {
-                  setTimeout(showPage, 300)
+                  setTimeout(showPage, 1000)
                 })
           
                 function showPage() {

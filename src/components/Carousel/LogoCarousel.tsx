@@ -1,3 +1,4 @@
+import Fade from 'react-reveal/Fade';
 import LogoCarouselItem from './LogoCarouselItem';
 import config from 'config';
 
@@ -17,12 +18,14 @@ const LogoCarousel: React.FC = () => {
   );
 
   return (
-    <div className="logo-carousel">
-      <div className="logo-carousel__inner">
-        {renderLogoCarousel()}
-        {renderLogoCarousel()}
+    <Fade right duration={500}>
+      <div className="logo-carousel slide-right">
+        <div className="logo-carousel__inner">
+          {renderLogoCarousel()}
+          {renderLogoCarousel()}
+        </div>
       </div>
-    </div>
+    </Fade>
   );
 };
 
