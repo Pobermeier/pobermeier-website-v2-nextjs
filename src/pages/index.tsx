@@ -11,11 +11,21 @@ const Home: React.FC = () => {
         <SEO />
         {/* Hero-Section */}
         <section className="hero is-fullheight-with-navbar is-large" id="hero">
-          <div id="bg-parallax" data-speed={1} className="hero-body lazy-background enhanced">
+          <div className="hero-body lazy-background enhanced">
             <div className="container">
               <h1 className="title has-text-white is-size-1 is-size-2-tablet is-size-3-mobile">
-                Creating <span className="cta-text">fresh &amp; fast web apps and sites</span> with
-                passion!
+                Creating{' '}
+                <span
+                  style={{
+                    display: 'inline-block',
+                    padding: '0.2em 0.2em',
+                    backgroundColor: 'rgba(35, 154, 59, 0.8)',
+                    borderRadius: '5px',
+                  }}
+                >
+                  fresh &amp; fast web apps and sites
+                </span>{' '}
+                with passion!
               </h1>
               <h1 className="subtitle has-text-white is-size-3 is-size-4-tablet is-size-5-mobile">
                 Frontend Developer &amp; Online-Marketing Expert from Vienna, Austria
