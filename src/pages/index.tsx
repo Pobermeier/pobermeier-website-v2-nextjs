@@ -49,7 +49,7 @@ const Home: React.FC = () => {
       <p className="control">
         <a
           className="button is-secondary is-rounded is-large gtm-tracked-link secondary-cta"
-          href="https://github.com/Pobermeier"
+          href={config.urls.github}
           target="_blank"
           rel="noopener noreferrer"
           id="github-hero-desktop"
@@ -96,7 +96,7 @@ const Home: React.FC = () => {
       <p className="control">
         <a
           className="button is-secondary is-fullwidth is-rounded is-medium gtm-tracked-link secondary-cta"
-          href="https://github.com/Pobermeier"
+          href={config.urls.github}
           target="_blank"
           rel="noopener noreferrer"
           id="github-hero-mobile"
@@ -246,7 +246,7 @@ const Home: React.FC = () => {
             you&apos;re interested in my work you&apos;re welcome to check out the other public
             repositories{' '}
             <a
-              href="https://github.com/Pobermeier"
+              href={config.urls.github}
               className="gtm-tracked-link"
               target="_blank"
               rel="noopener noreferrer"

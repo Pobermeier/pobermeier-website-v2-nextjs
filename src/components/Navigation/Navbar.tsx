@@ -1,4 +1,5 @@
 /* eslint-disable */
+import config from 'config';
 import useNavMenu from 'hooks/useNavMenu';
 import { useRouter } from 'next/dist/client/router';
 import Link from 'next/link';
@@ -96,7 +97,7 @@ const Navbar: React.FC<Props> = ({ isNavbarOpen, setIsNavMenuOpen }) => {
               <a
                 className="navbar-item is-hidden-touch gtm-tracked-link"
                 onClick={closeNavMenu}
-                href="https://www.linkedin.com/in/patrickobermeier/"
+                href={config.urls.linkedIn}
                 target="_blank"
                 rel="noopener noreferrer"
                 id="linkedin-icon-desktop"
@@ -118,7 +119,7 @@ const Navbar: React.FC<Props> = ({ isNavbarOpen, setIsNavMenuOpen }) => {
               <a
                 className="navbar-item is-hidden-touch gtm-tracked-link"
                 onClick={closeNavMenu}
-                href="https://twitter.com/pobermeier87"
+                href={config.urls.twitter}
                 target="_blank"
                 rel="noopener noreferrer"
                 id="twitter-icon-desktop"
@@ -140,7 +141,7 @@ const Navbar: React.FC<Props> = ({ isNavbarOpen, setIsNavMenuOpen }) => {
               <a
                 className="navbar-item is-hidden-touch gtm-tracked-link"
                 onClick={closeNavMenu}
-                href="https://github.com/Pobermeier"
+                href={config.urls.github}
                 target="_blank"
                 rel="noopener noreferrer"
                 id="github-icon-desktop"
@@ -204,7 +205,7 @@ const Navbar: React.FC<Props> = ({ isNavbarOpen, setIsNavMenuOpen }) => {
               <span className="navbar-item is-hidden-desktop" onClick={closeNavMenu}>
                 <a
                   className="button is-rounded is-secondary gtm-tracked-link"
-                  href="https://www.linkedin.com/in/patrickobermeier/"
+                  href={config.urls.linkedIn}
                   target="_blank"
                   rel="noopener noreferrer"
                   id="linkedin-icon-mobile"
@@ -227,7 +228,7 @@ const Navbar: React.FC<Props> = ({ isNavbarOpen, setIsNavMenuOpen }) => {
               <span className="navbar-item is-hidden-desktop" onClick={closeNavMenu}>
                 <a
                   className="button is-rounded is-secondary gtm-tracked-link"
-                  href="https://twitter.com/pobermeier87"
+                  href={config.urls.twitter}
                   target="_blank"
                   rel="noopener noreferrer"
                   id="twitter-icon-mobile"
@@ -251,7 +252,7 @@ const Navbar: React.FC<Props> = ({ isNavbarOpen, setIsNavMenuOpen }) => {
               <span className="navbar-item is-hidden-desktop" onClick={closeNavMenu}>
                 <a
                   className="button is-rounded is-secondary gtm-tracked-link"
-                  href="https://github.com/Pobermeier"
+                  href={config.urls.github}
                   target="_blank"
                   rel="noopener noreferrer"
                   id="github-icon-mobile"

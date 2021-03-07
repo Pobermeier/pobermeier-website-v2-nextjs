@@ -49,11 +49,7 @@ const Imprint: React.FC = () => {
             <p>
               Designed and created by {config.meta.siteOwnerName}. The code for this website is
               available{' '}
-              <a
-                href="https://github.com/Pobermeier/pobermeier-website-v1"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <a href={config.urls.websiteRepo} target="_blank" rel="noopener noreferrer">
                 here.
               </a>
             </p>
