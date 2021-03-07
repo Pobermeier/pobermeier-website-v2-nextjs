@@ -17,7 +17,7 @@ const LogoCarousel: React.FC = () => {
   );
 
   return (
-    <div className="logo-carousel" data-aos="fade-right">
+    <div className="logo-carousel">
       <div className="logo-carousel__inner">
         {renderLogoCarousel()}
         {renderLogoCarousel()}

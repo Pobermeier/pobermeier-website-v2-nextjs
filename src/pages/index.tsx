@@ -162,7 +162,7 @@ const Home: React.FC = () => {
           <div className="container has-text-centered">
             <h2 className="title">About Me</h2>
             <div className="columns level">
-              <div className="column level-item has-text-centered profile-img" data-aos="fade-left">
+              <div className="column level-item has-text-centered profile-img">
                 <figure className="image">
                   <picture>
                     <source srcSet="./img/profile.webp" type="image/webp" />
@@ -286,7 +286,7 @@ const Home: React.FC = () => {
               </a>
               .
             </p>
-            <div className="columns project-cards" data-aos="fade-left">
+            <div className="columns project-cards">
               {config.projects.personal.map((project, index) => {
                 if (index >= 3) return null;
 
@@ -298,7 +298,7 @@ const Home: React.FC = () => {
               })}
             </div>
             <br />
-            <div className="columns project-cards" data-aos="fade-right">
+            <div className="columns project-cards">
               {config.projects.personal.map((project, index) => {
                 if (index < 3) return null;
 
@@ -319,7 +319,7 @@ const Home: React.FC = () => {
               In this section you can find some excerpts from my day-to-day professional work.
               Please note that the source for these projects is private due to confidentiality.
             </p>
-            <div className="columns project-cards" data-aos="fade-left">
+            <div className="columns project-cards">
               {config.projects.work.map((project) => {
                 return (
                   <div className="column" key={project.id}>

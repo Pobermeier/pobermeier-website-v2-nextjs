@@ -75,11 +75,6 @@ const Uses: React.FC = () => {
               </a>
             </li>
             <li>
-              <a href="https://github.com/michalsnik/aos" target="_blank" rel="noopener noreferrer">
-                AOS Animation Library
-              </a>
-            </li>
-            <li>
               <a href="https://parceljs.org/" target="_blank" rel="noopener noreferrer">
                 Parcel Bundler
               </a>{' '}

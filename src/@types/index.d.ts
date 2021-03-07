@@ -1,1 +1,1 @@
-declare const AOS;
+// Declare global vars here

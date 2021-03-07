@@ -119,12 +119,6 @@ class MyDocument extends Document {
                       rgba(109, 48, 57, 0.25)),
                     url("./img/hero.webp") !important;
                 }
-            
-                .no-js [data-aos] {
-                  opacity: 1 !important;
-                  transform: translate(0) scale(1) !important;
-                  pointer-events: all;
-                }
               `,
             }}
           />
@@ -208,8 +202,6 @@ class MyDocument extends Document {
               `,
             }}
           />
-
-          <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" />
 
           <NextScript />
 

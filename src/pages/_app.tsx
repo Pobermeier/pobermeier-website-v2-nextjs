@@ -2,7 +2,6 @@ import { ComponentClass, useState } from 'react';
 import { AppProps } from 'next/app';
 import MainLayout from 'layouts/MainLayout';
 import useEmailPlaceholders from 'hooks/useEmailPlaceholders';
-import useAOS from 'hooks/useAOS';
 import 'styles/scss/styles.scss';
 import useScrollToHashOnPageLoad from 'hooks/useScrolltoHashOnPageLoad';
 import useCookieBanner from 'hooks/useCookieBanner';
@@ -12,7 +11,6 @@ const MyApp: React.FC<Props> = ({ Component, pageProps }) => {
 
   useEmailPlaceholders();
   useScrollToHashOnPageLoad();
-  useAOS();
   useCookieBanner();
 
   return (
