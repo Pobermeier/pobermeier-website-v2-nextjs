@@ -49,6 +49,11 @@ class MyDocument extends Document {
           <meta name="msapplication-TileColor" content="#ffffff" />
           <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
 
+          <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400&display=swap"
+            rel="stylesheet"
+          />
+
           <script
             dangerouslySetInnerHTML={{
               __html: `
@@ -193,7 +198,7 @@ class MyDocument extends Document {
             dangerouslySetInnerHTML={{
               __html: `
                 document.addEventListener("DOMContentLoaded", () => {
-                  setTimeout(showPage, 1000)
+                  setTimeout(showPage, 300)
                 })
           
                 function showPage() {
@@ -215,20 +220,8 @@ class MyDocument extends Document {
                   let vh = window.innerHeight * 0.01;
                   document.documentElement.style.setProperty("--vh", vh+"px");
                 }
-                
-                function fetchStyle(url) {
-                  let link = document.createElement("link");
-                  link.type = "text/css";
-                  link.rel = "stylesheet";
-                  link.href = url;
-                  let headScript = document.querySelector("script");
-                  headScript.parentNode.insertBefore(link, headScript);
-                }
 
                 window.addEventListener("load", () => {
-                  fetchStyle(
-                    "https://fonts.googleapis.com/css?family=Montserrat:200,400&display=swap"
-                  );
                   convertWindowHeightToViewPortHeight();
                 });
               
