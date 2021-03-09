@@ -25,8 +25,6 @@ const HeroSection: React.FC<Props> = ({ desktopButtons, mobileButtons, subtitle,
           </Fade>
           <Fade left>
             <div className="field is-grouped is-hidden-touch ">{desktopButtons}</div>
-          </Fade>
-          <Fade left>
             <div className="field is-hidden-desktop ">{mobileButtons}</div>
           </Fade>
         </div>
