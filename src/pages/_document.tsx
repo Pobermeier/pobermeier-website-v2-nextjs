@@ -235,7 +235,7 @@ class MyDocument extends Document {
 
                 window.addEventListener("load", () => {
                   fetchStyle("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400&display=swap");
-                  fetchStyle("https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css");
+                  screen.width > 648 && fetchStyle("https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css");
                   convertWindowHeightToViewPortHeight();
                 });
               
