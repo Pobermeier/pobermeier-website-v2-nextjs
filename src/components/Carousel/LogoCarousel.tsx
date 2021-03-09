@@ -1,3 +1,4 @@
+import ScrollAnimation from 'react-animate-on-scroll';
 import LogoCarouselItem from './LogoCarouselItem';
 import config from 'config';
 
@@ -17,12 +18,14 @@ const LogoCarousel: React.FC = () => {
   );
 
   return (
-    <div className="logo-carousel" style={{ opacity: '1 !important' }}>
-      <div className="logo-carousel__inner">
-        {renderLogoCarousel()}
-        {renderLogoCarousel()}
+    <ScrollAnimation animateIn="fadeInRight">
+      <div className="logo-carousel" style={{ opacity: '1 !important' }}>
+        <div className="logo-carousel__inner">
+          {renderLogoCarousel()}
+          {renderLogoCarousel()}
+        </div>
       </div>
-    </div>
+    </ScrollAnimation>
   );
 };
 

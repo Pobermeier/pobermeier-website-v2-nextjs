@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import ScrollAnimation from 'react-animate-on-scroll';
 import HeroSection from '@/components/Sections/HeroSection';
 import LogoCarousel from '@/components/Carousel/LogoCarousel';
 import ProjectCard from '@/components/Projects/ProjectCard';
@@ -134,19 +135,21 @@ const Home: React.FC = () => {
           <h2 className="title">About Me</h2>
           <div className="columns level">
             <div className="column level-item has-text-centered profile-img">
-              <figure className="image">
-                <picture>
-                  <source srcSet="./img/profile.webp" type="image/webp" />
-                  <img
-                    className="is-rounded"
-                    loading="lazy"
-                    width={200}
-                    height={200}
-                    src="./img/profile.jpg"
-                    alt="Patrick Obermeier"
-                  />
-                </picture>
-              </figure>
+              <ScrollAnimation animateIn="fadeInRight">
+                <figure className="image">
+                  <picture>
+                    <source srcSet="./img/profile.webp" type="image/webp" />
+                    <img
+                      className="is-rounded"
+                      loading="lazy"
+                      width={200}
+                      height={200}
+                      src="./img/profile.jpg"
+                      alt="Patrick Obermeier"
+                    />
+                  </picture>
+                </figure>
+              </ScrollAnimation>
             </div>
             <div className="column is-three-quarters level-item">
               <p className="subtitle has-text-left">
@@ -257,29 +260,33 @@ const Home: React.FC = () => {
             </a>
             .
           </p>
-          <div className="columns project-cards">
-            {config.projects.personal.map((project, index) => {
-              if (index >= 3) return null;
+          <ScrollAnimation animateIn="fadeInLeft">
+            <div className="columns project-cards">
+              {config.projects.personal.map((project, index) => {
+                if (index >= 3) return null;
 
-              return (
-                <div className="column" key={project.id}>
-                  <ProjectCard project={project} />
-                </div>
-              );
-            })}
-          </div>
+                return (
+                  <div className="column" key={project.id}>
+                    <ProjectCard project={project} />
+                  </div>
+                );
+              })}
+            </div>
+          </ScrollAnimation>
           <br />
-          <div className="columns project-cards">
-            {config.projects.personal.map((project, index) => {
-              if (index < 3) return null;
+          <ScrollAnimation animateIn="fadeInRight">
+            <div className="columns project-cards">
+              {config.projects.personal.map((project, index) => {
+                if (index < 3) return null;
 
-              return (
-                <div className="column" key={project.id}>
-                  <ProjectCard project={project} />
-                </div>
-              );
-            })}
-          </div>
+                return (
+                  <div className="column" key={project.id}>
+                    <ProjectCard project={project} />
+                  </div>
+                );
+              })}
+            </div>
+          </ScrollAnimation>
         </div>
       </section>
       {/* Work Excerpts */}
@@ -290,15 +297,17 @@ const Home: React.FC = () => {
             In this section you can find some excerpts from my day-to-day professional work. Please
             note that the source for these projects is private due to confidentiality.
           </p>
-          <div className="columns project-cards">
-            {config.projects.work.map((project) => {
-              return (
-                <div className="column" key={project.id}>
-                  <ProjectCard project={project} />
-                </div>
-              );
-            })}
-          </div>
+          <ScrollAnimation animateIn="fadeInLeft">
+            <div className="columns project-cards">
+              {config.projects.work.map((project) => {
+                return (
+                  <div className="column" key={project.id}>
+                    <ProjectCard project={project} />
+                  </div>
+                );
+              })}
+            </div>
+          </ScrollAnimation>
           <div className="columns">
             <div className="column">
               <p className="control has-text-centered" style={{ marginTop: '2rem' }}>
