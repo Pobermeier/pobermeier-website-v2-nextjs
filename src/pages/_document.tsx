@@ -49,11 +49,6 @@ class MyDocument extends Document {
           <meta name="msapplication-TileColor" content="#ffffff" />
           <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
 
-          <link
-            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400&display=swap"
-            rel="stylesheet"
-          />
-
           <script
             dangerouslySetInnerHTML={{
               __html: `
@@ -122,17 +117,6 @@ class MyDocument extends Document {
               `,
             }}
           />
-          {/* Google Tag Manager */}
-          <script
-            dangerouslySetInnerHTML={{
-              __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-                j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-                'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-                })(window,document,'script','dataLayer','${config.gtm.id}');`,
-            }}
-          />
-          {/* End Google Tag Manager */}
         </Head>
         <body>
           {/* Google Tag Manager (noscript) */}
@@ -205,15 +189,52 @@ class MyDocument extends Document {
 
           <NextScript />
 
+          {/* Google Tag Manager */}
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+                j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+                'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+                })(window,document,'script','dataLayer','${config.gtm.id}');`,
+            }}
+          />
+          {/* End Google Tag Manager */}
+
           <script
             dangerouslySetInnerHTML={{
               __html: `
+                function fetchStyle(url) {
+                  const link = document.createElement("link");
+                  link.type = "text/css";
+                  link.rel = "stylesheet";
+                  link.href = url;
+                  const headScript = document.querySelector("script");
+                  headScript.parentNode.insertBefore(link, headScript);
+                }
+
+                function fetchScript(url, text, onloadCb) {
+                  const script = document.createElement("script");
+                  if(url) {
+                    script.src = url;
+                  }
+                  if(text) {
+                    script.innerHTML = text;
+                  }
+                  if(onloadCb) {
+                    script.onload = onloadCb;
+                  }
+                  const scripts = document.querySelector("#scripts");
+                  scripts.parentNode.insertBefore(script, scripts);
+                }
+
                 function convertWindowHeightToViewPortHeight() {
                   let vh = window.innerHeight * 0.01;
                   document.documentElement.style.setProperty("--vh", vh+"px");
                 }
 
                 window.addEventListener("load", () => {
+                  fetchStyle("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400&display=swap");
                   convertWindowHeightToViewPortHeight();
                 });
               
