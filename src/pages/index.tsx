@@ -5,6 +5,7 @@ import LogoCarousel from '@/components/Carousel/LogoCarousel';
 import ProjectCard from '@/components/Projects/ProjectCard';
 import SEO from '@/components/SEO/SEO';
 import config from 'config';
+import ContactSection from '@/components/Sections/ContactSection';
 
 const Home: React.FC = () => {
   const title = (): JSX.Element => (
@@ -323,146 +324,7 @@ const Home: React.FC = () => {
           </div>
         </div>
       </section>
-      {/* Contact Form */}
-      <section className="section" id="contact">
-        <div className="container has-text-centered">
-          <h2 className="title">Get In Touch</h2>
-          <p className="subtitle">
-            Whether you are interested in hiring me, to work on a project together or to discuss any
-            other proposal, feel free to contact me anytime. I am very much looking forward to your
-            message!
-          </p>
-          <div className="form-container">
-            <form
-              action="/success"
-              className="control"
-              id="contact-form"
-              name="contact-form"
-              data-netlify="true"
-              method="POST"
-            >
-              <div className="field is-horizontal">
-                <div className="field-body">
-                  <div className="field">
-                    <div className="control">
-                      <input
-                        className="input"
-                        type="text"
-                        name="firstName"
-                        id="firstName"
-                        placeholder=" "
-                        required
-                      />
-                      <label className="label floating-label" htmlFor="firstName">
-                        First Name
-                      </label>
-                    </div>
-                  </div>
-                  <div className="field">
-                    <div className="control">
-                      <input
-                        className="input"
-                        type="text"
-                        name="lastName"
-                        id="lastName"
-                        placeholder=" "
-                        required
-                      />
-                      <label className="label floating-label" htmlFor="lastName">
-                        Last Name
-                      </label>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="field">
-                <div className="control">
-                  <input
-                    className="input"
-                    type="email"
-                    id="email"
-                    name="email"
-                    placeholder=" "
-                    required
-                  />
-                  <label className="label floating-label" htmlFor="email">
-                    Email
-                  </label>
-                </div>
-              </div>
-              <div className="field">
-                <div className="control">
-                  <input
-                    className="input"
-                    type="text"
-                    name="subject"
-                    id="subject"
-                    placeholder=" "
-                    required
-                  />
-                  <label className="label floating-label" htmlFor="subject">
-                    Subject
-                  </label>
-                </div>
-              </div>
-              {/* <div class="field is-hidden">
-          <label class="label" for="telnr">Telnr</label>
-          <div class="control">
-            <input class="input" type="text" name="telnr" id="telnr">
-          </div>
-        </div> */}
-              <div className="field">
-                <div className="control">
-                  <textarea
-                    className="textarea"
-                    name="message"
-                    id="message"
-                    placeholder=" "
-                    required
-                    defaultValue={''}
-                  />
-                  <label className="label floating-label" htmlFor="message">
-                    Message
-                  </label>
-                </div>
-              </div>
-              {/* <div data-netlify-recaptcha="true"></div> */}
-              <div className="field is-grouped is-hidden-touch">
-                <div className="control">
-                  <input
-                    type="submit"
-                    className="button is-primary is-rounded is-medium"
-                    defaultValue="Send Message"
-                  />
-                </div>
-                <div className="control">
-                  <input
-                    type="reset"
-                    className="button is-secondary is-rounded is-medium"
-                    defaultValue="Reset Form"
-                  />
-                </div>
-              </div>
-              <div className="field is-hidden-desktop">
-                <div className="control">
-                  <input
-                    type="submit"
-                    className="button is-primary is-rounded is-fullwidth is-medium"
-                    defaultValue="Send Message"
-                  />
-                </div>
-                <div className="control">
-                  <input
-                    type="reset"
-                    className="button is-secondary is-outlined is-rounded is-fullwidth is-medium"
-                    defaultValue="Reset Form"
-                  />
-                </div>
-              </div>
-            </form>
-          </div>
-        </div>
-      </section>
+      <ContactSection />
     </div>
   );
 };
