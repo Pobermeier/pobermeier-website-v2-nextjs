@@ -1,5 +1,4 @@
 import React from 'react';
-import Fade from 'react-reveal/Fade';
 
 interface Props {
   desktopButtons?: JSX.Element;
@@ -13,20 +12,16 @@ const HeroSection: React.FC<Props> = ({ desktopButtons, mobileButtons, subtitle,
     <section className="hero is-fullheight-with-navbar is-large " id="hero">
       <div className="hero-body lazy-background enhanced">
         <div className="container">
-          <Fade left>
-            <h1 className="title has-text-white is-size-1 is-size-2-tablet is-size-3-mobile ">
-              {title}
-            </h1>
-          </Fade>
-          <Fade right>
-            <h2 className="subtitle has-text-white is-size-3 is-size-4-tablet is-size-5-mobile ">
-              {subtitle}
-            </h2>
-          </Fade>
-          <Fade left>
-            <div className="field is-grouped is-hidden-touch ">{desktopButtons}</div>
-            <div className="field is-hidden-desktop ">{mobileButtons}</div>
-          </Fade>
+          <h1 className="title has-text-white is-size-1 is-size-2-tablet is-size-3-mobile ">
+            {title}
+          </h1>
+
+          <h2 className="subtitle has-text-white is-size-3 is-size-4-tablet is-size-5-mobile ">
+            {subtitle}
+          </h2>
+
+          <div className="field is-grouped is-hidden-touch ">{desktopButtons}</div>
+          <div className="field is-hidden-desktop ">{mobileButtons}</div>
         </div>
       </div>
     </section>

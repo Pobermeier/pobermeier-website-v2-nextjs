@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import Fade from 'react-reveal/Fade';
 import HeroSection from '@/components/Sections/HeroSection';
 import LogoCarousel from '@/components/Carousel/LogoCarousel';
 import ProjectCard from '@/components/Projects/ProjectCard';
@@ -135,21 +134,19 @@ const Home: React.FC = () => {
           <h2 className="title">About Me</h2>
           <div className="columns level">
             <div className="column level-item has-text-centered profile-img">
-              <Fade right duration={300}>
-                <figure className="image">
-                  <picture>
-                    <source srcSet="./img/profile.webp" type="image/webp" />
-                    <img
-                      className="is-rounded"
-                      loading="lazy"
-                      width={200}
-                      height={200}
-                      src="./img/profile.jpg"
-                      alt="Patrick Obermeier"
-                    />
-                  </picture>
-                </figure>
-              </Fade>
+              <figure className="image">
+                <picture>
+                  <source srcSet="./img/profile.webp" type="image/webp" />
+                  <img
+                    className="is-rounded"
+                    loading="lazy"
+                    width={200}
+                    height={200}
+                    src="./img/profile.jpg"
+                    alt="Patrick Obermeier"
+                  />
+                </picture>
+              </figure>
             </div>
             <div className="column is-three-quarters level-item">
               <p className="subtitle has-text-left">
@@ -266,9 +263,7 @@ const Home: React.FC = () => {
 
               return (
                 <div className="column" key={project.id}>
-                  <Fade right duration={500 + 100 * index}>
-                    <ProjectCard project={project} />
-                  </Fade>
+                  <ProjectCard project={project} />
                 </div>
               );
             })}
@@ -280,9 +275,7 @@ const Home: React.FC = () => {
 
               return (
                 <div className="column" key={project.id}>
-                  <Fade left duration={500 + 100 * index}>
-                    <ProjectCard project={project} />
-                  </Fade>
+                  <ProjectCard project={project} />
                 </div>
               );
             })}
@@ -298,12 +291,10 @@ const Home: React.FC = () => {
             note that the source for these projects is private due to confidentiality.
           </p>
           <div className="columns project-cards">
-            {config.projects.work.map((project, index) => {
+            {config.projects.work.map((project) => {
               return (
                 <div className="column" key={project.id}>
-                  <Fade right duration={500 + 100 * index}>
-                    <ProjectCard project={project} />
-                  </Fade>
+                  <ProjectCard project={project} />
                 </div>
               );
             })}
