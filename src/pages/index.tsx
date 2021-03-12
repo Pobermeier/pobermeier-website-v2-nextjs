@@ -146,7 +146,7 @@ const Home: React.FC = () => {
                       width={200}
                       height={200}
                       src="./img/profile.jpg"
-                      alt="Patrick Obermeier"
+                      alt={config.meta.siteOwnerName}
                     />
                   </picture>
                 </figure>
