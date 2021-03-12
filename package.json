@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "build": "next build",
-    "build:docker": "docker build .",
+    "build:docker": "docker build -t pobermeier-portfolio .",
     "cicd": "npm run clean && npm run lint && npm run ts-validate && npm run build",
     "cicd:static": "npm run clean && npm run lint && npm run ts-validate && npm run export",
     "clean": "rm -rf .next out",
@@ -18,6 +18,7 @@
     "postinstall": "husky install",
     "serve": "npx serve out",
     "start": "next start",
+    "start:docker": "docker run -p 80:3000 pobermeier-portfolio",
     "ts-validate": "tsc --project tsconfig.json --pretty --noEmit"
   },
   "dependencies": {
