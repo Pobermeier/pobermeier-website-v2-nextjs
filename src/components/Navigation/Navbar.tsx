@@ -1,10 +1,19 @@
 /* eslint-disable */
-import config from 'config';
-import useNavMenu from 'hooks/useNavMenu';
-import { useRouter } from 'next/dist/client/router';
-import Link from 'next/link';
 import { Dispatch, KeyboardEvent, SetStateAction } from 'react';
+import Link from 'next/link';
+import { useRouter } from 'next/dist/client/router';
+
+// constants
+import { keys } from 'Constants';
+
+// hooks
+import useNavMenu from 'hooks/useNavMenu';
+
+// resources
 import MainLogoImg from '../Icons/MainLogo';
+
+// config
+import config from 'config';
 
 const rootPath = '/';
 const resumePath = "/resume"
@@ -18,7 +27,7 @@ const Navbar: React.FC<Props> = ({ isNavbarOpen, setIsNavMenuOpen }) => {
   const [toggleNavMenu, closeNavMenu] = useNavMenu(setIsNavMenuOpen, isNavbarOpen);
 
   const onEnterKeyDown = (event: KeyboardEvent<HTMLAnchorElement>): void => {
-    event.key == 'Enter' && toggleNavMenu();
+    event.key == keys.enter.keyName && toggleNavMenu();
   };
 
   if (isResumePath) return null; 
